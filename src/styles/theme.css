@@ -1,0 +1,68 @@
+:root {
+  --page-bg: #ede7dc;
+  --cream: #ede7dc;
+  --paper: #fdfbf7;
+  --chrome: #e6dcc9;
+
+  --ink: #28221f;
+  --ink-soft: #75695d;
+
+  --rose: #b15a4f;
+  --rose-soft: #ead8d0;
+
+  --sage: #6b7a4a;
+  --sage-soft: #e3e6ce;
+
+  --lilac: #a67a38;
+  --lilac-soft: #eedfc0;
+
+  --line: #dcd0ba;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --cream: #1e1a17;
+    --paper: #282320;
+    --chrome: #2e2824;
+
+    --ink: #f4ebdf;
+    --ink-soft: #afa192;
+
+    --rose: #e0a093;
+    --rose-soft: #472f2c;
+
+    --sage: #b8c593;
+    --sage-soft: #343820;
+
+    --lilac: #deb973;
+    --lilac-soft: #3f331e;
+
+    --line: #3c332b;
+
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --cream: #1e1a17;
+  --paper: #282320;
+  --chrome: #2e2824;
+
+  --ink: #f4ebdf;
+  --ink-soft: #afa192;
+
+  --rose: #e0a093;
+  --rose-soft: #472f2c;
+
+  --sage: #b8c593;
+  --sage-soft: #343820;
+
+  --lilac: #deb973;
+  --lilac-soft: #3f331e;
+
+  --line: #3c332b;
+
+  color-scheme: dark;
+}

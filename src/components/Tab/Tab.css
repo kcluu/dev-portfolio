@@ -1,0 +1,87 @@
+.tab {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 12px;
+  margin-right: 14px;
+
+  border-radius: 10px 0 0 10px;
+  border: 1px solid var(--line);
+  border-right: none;
+
+  font-size: 0.86rem;
+  font-family: inherit;
+  color: var(--ink-soft);
+
+  background: var(--chrome);
+  cursor: pointer;
+  text-align: left;
+
+  transition: background 0.2s ease, color 0.2s ease, margin-right 0.18s ease, box-shadow 0.2s ease;
+}
+
+.tab .favicon {
+  flex: 0 0 auto;
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
+}
+
+.tab[data-tab='about'] .favicon {
+  background: var(--rose);
+}
+
+.tab[data-tab='work'] .favicon {
+  background: var(--sage);
+}
+
+.tab[data-tab='contact'] .favicon {
+  background: var(--lilac);
+}
+
+.tab .label {
+  flex: 1 1 auto;
+}
+
+.tab:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.tab.active {
+  margin-right: 0;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 600;
+
+  box-shadow: 0 6px 14px rgba(46, 39, 51, 0.1);
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab {
+    transition: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .tab {
+    margin-right: 0;
+    margin-bottom: 12px;
+
+    border-radius: 10px 10px 0 0;
+    border: 1px solid var(--line);
+    border-bottom: none;
+  }
+
+  .tab.active {
+    margin-bottom: 0;
+  }
+}

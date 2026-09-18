@@ -1,0 +1,35 @@
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 6px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 0.92rem;
+  color: var(--ink);
+  text-decoration: none;
+
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--cream);
+
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-links a:hover {
+  border-color: var(--rose);
+  color: var(--rose);
+}
+
+.contact-links svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+}

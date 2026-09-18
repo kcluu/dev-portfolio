@@ -1,0 +1,81 @@
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 14px 18px;
+
+  background: var(--chrome);
+  border-bottom: 1px solid var(--line);
+
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.chrome:active {
+  cursor: grabbing;
+}
+
+.dots {
+  display: flex;
+  gap: 7px;
+  flex: 0 0 auto;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dots span:nth-child(1) {
+  background: var(--rose);
+  opacity: 0.75;
+}
+
+.dots span:nth-child(2) {
+  background: var(--lilac);
+  opacity: 0.75;
+}
+
+.dots span:nth-child(3) {
+  background: var(--sage);
+  opacity: 0.75;
+}
+
+.addr {
+  flex: 1 1 auto;
+
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-width: 0;
+  overflow: hidden;
+}
+
+.addr .lock {
+  flex: 0 0 auto;
+  opacity: 0.6;
+}
+
+.addr .url {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.addr .url b {
+  color: var(--ink);
+  font-weight: 600;
+}
