@@ -3,32 +3,12 @@
   align-items: center;
   gap: 9px;
 
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: var(--ink);
 
-  margin: 30px 0 16px;
-}
-
-.section-label:first-of-type {
-  margin-top: 4px;
-}
-
-.section-label .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-
-  flex: 0 0 auto;
-}
-
-.section-label.career .dot {
-  background: var(--rose);
-}
-
-.section-label.projects .dot {
-  background: var(--sage);
+  margin: 16px 0 16px;
 }
 
 .timeline {

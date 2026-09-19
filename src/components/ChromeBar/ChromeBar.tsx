@@ -38,7 +38,7 @@ export const ChromeBar = ({
       <div className="addr">
         <span className="lock">🔒</span>
         <span className="url">
-          nora<b>.</b>dev{urlPath}
+          kluu<b>.</b>dev{urlPath}
         </span>
       </div>
 

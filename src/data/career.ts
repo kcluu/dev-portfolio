@@ -1,35 +1,35 @@
 export interface CareerEntry {
-  role: string
-  company: string
-  dateRange: string
-  description: string
+  role: string;
+  company: string;
+  dateRange: string;
+  description: string;
 }
 
 export const careerHistory: CareerEntry[] = [
   {
-    role: 'Senior Software Engineer',
-    company: 'Fenwick Labs',
-    dateRange: '2023 — Present',
+    role: "Software Engineer II (L2)",
+    company: "AlphaSights",
+    dateRange: "July 2024 - August 2026",
 
     description:
-      "Leading the platform team on our core API, mentoring two junior engineers, and slowly convincing everyone that a well-organized Figma file counts as documentation.",
+      "Developed full-stack features for the Experts web platform, including an AI call transcription workflow, and led the modernization of the platform's location and language architecture to support multilingual expert profiles.",
   },
 
   {
-    role: 'Software Engineer',
-    company: 'Brightloop',
-    dateRange: '2021 — 2023',
+    role: "Software Engineer I",
+    company: "CoStar Group",
+    dateRange: "July 2022 - July 2024",
 
     description:
-      'Built the customer-facing dashboard from scratch and worked closely with design to grow our shared component library from nothing into something other teams actually wanted to use.',
+      "My first engineering role after graduating university. Learned to ship full-stack applications fast, write tests I actually trusted, and take code review feedback without taking it personally.",
   },
 
   {
-    role: 'Junior Developer',
-    company: 'Studio Nine',
-    dateRange: '2019 — 2021',
+    role: "Software Engineer Intern",
+    company: "Cisco",
+    dateRange: "May 2021 - August 2021",
 
     description:
-      'My first engineering role out of school. Learned to ship fast, write tests I actually trusted, and take code review feedback without taking it personally.',
+      "Diagnosed CI/CD pipeline failures and built Java integration tests to simulate hardware telemetry, strengthening the reliability of automated testing for hardware-dependent workflows.",
   },
-]
+];

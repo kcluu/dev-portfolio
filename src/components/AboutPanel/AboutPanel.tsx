@@ -1,24 +1,38 @@
-import '../../styles/panel.css'
-import './AboutPanel.css'
+import "../../styles/panel.css";
+import "./AboutPanel.css";
 
-const SKILLS = ['TypeScript', 'React', 'Node.js', 'Python', 'PostgreSQL', 'Figma-curious']
+const SKILLS = [
+  "TypeScript",
+  "React",
+  "Node.js",
+  "Kotlin",
+  "Ruby",
+  "Python",
+  "Java",
+  "HTML",
+  "PostgreSQL",
+  "GraphQL",
+  "REST APIs",
+  "CSS perfectionist",
+];
 
 export const AboutPanel = () => {
   return (
     <section className="panel">
-      <p className="eyebrow">hi, I'm Nora</p>
+      <p className="eyebrow">Hi, I'm Katelyn</p>
 
       <h1 className="heading">
-        Software engineer with a soft spot
-        <br />
-        for tidy code and cozy interfaces.
+        Software engineer with full-stack expertise and a deep appreciation for
+        thoughtful design.
       </h1>
 
       <p className="lede">
-        I'm a software engineer based in Austin, TX, currently building web products by day and small side-projects
-        by night. I like systems that are both fast and kind to the people using them — good error states, gentle
-        empty states, a UI that doesn't yell. Outside of work you'll find me collecting houseplants, drinking too
-        much oolong tea, and redesigning this website for the fourth time.
+        Based in New York City, most of my work lives at the intersection of
+        full-stack development and UX design. I've always been drawn to the
+        space where design and technology meet - building things that don't just
+        function but feel considered. Outside of work, you'll find me out with
+        my film camera, at a concert, or waiting in an unnecessarily long line
+        somewhere in the city.
       </p>
 
       <div className="chips">
@@ -29,5 +43,5 @@ export const AboutPanel = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};

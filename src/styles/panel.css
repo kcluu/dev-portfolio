@@ -1,27 +1,9 @@
 .panel {
-  animation: fadeUp 0.35s ease;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .panel {
-    animation: none;
-  }
+  animation: none;
 }
 
 .eyebrow {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Instrument Sans", sans-serif;
   font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.03em;
@@ -31,11 +13,11 @@
 }
 
 .heading {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-weight: 600;
   font-size: clamp(1.7rem, 3vw, 2.3rem);
 
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   line-height: 1.15;
   letter-spacing: -0.01em;
 }
