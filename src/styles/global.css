@@ -10,22 +10,28 @@ body {
 
 body {
   min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 
   background: var(--page-bg);
-  background-image: radial-gradient(circle at 12% 18%, rgba(177, 90, 79, 0.08), transparent 40%),
-    radial-gradient(circle at 88% 82%, rgba(107, 122, 74, 0.09), transparent 42%);
+  background-image:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(177, 90, 79, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      rgba(107, 122, 74, 0.09),
+      transparent 42%
+    );
 
-  font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
   color: var(--ink);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6vh 5vw;
 }
 
 .display {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: "Fraunces", Georgia, serif;
 }
 
 a:focus-visible,

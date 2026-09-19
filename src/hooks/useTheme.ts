@@ -1,29 +1,25 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from "react";
 
-type ThemeOverride = 'light' | 'dark' | null
-
-function systemPrefersDark(): boolean {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-}
+type ThemeOverride = "light" | "dark" | null;
 
 export function useTheme() {
-  const [override, setOverride] = useState<ThemeOverride>(null)
+  const [override, setOverride] = useState<ThemeOverride>("light");
 
-  const isDark = override === 'dark' || (override === null && systemPrefersDark())
+  const isDark = override === "dark";
 
   useEffect(() => {
-    const root = document.documentElement
+    const root = document.documentElement;
 
     if (override === null) {
-      root.removeAttribute('data-theme')
+      root.removeAttribute("data-theme");
     } else {
-      root.setAttribute('data-theme', override)
+      root.setAttribute("data-theme", override);
     }
-  }, [override])
+  }, [override]);
 
   const toggleTheme = useCallback(() => {
-    setOverride(isDark ? 'light' : 'dark')
-  }, [isDark])
+    setOverride(isDark ? "light" : "dark");
+  }, [isDark]);
 
-  return { isDark, toggleTheme }
+  return { isDark, toggleTheme };
 }

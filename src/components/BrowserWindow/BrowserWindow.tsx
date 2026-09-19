@@ -1,43 +1,52 @@
-import { useRef } from 'react'
+import { useRef } from "react";
 
-import { ChromeBar } from '../ChromeBar/ChromeBar'
-import { Sidebar } from '../Sidebar/Sidebar'
-import { type TabId } from '../Tab/Tab'
+import { ChromeBar } from "../ChromeBar/ChromeBar";
+import { Sidebar } from "../Sidebar/Sidebar";
+import { type TabId } from "../Tab/Tab";
 
-import { AboutPanel } from '../AboutPanel/AboutPanel'
-import { WorkPanel } from '../WorkPanel/WorkPanel'
-import { ContactPanel } from '../ContactPanel/ContactPanel'
+import { AboutPanel } from "../AboutPanel/AboutPanel";
+import { WorkPanel } from "../WorkPanel/WorkPanel";
+import { ContactPanel } from "../ContactPanel/ContactPanel";
 
-import { useTheme } from '../../hooks/useTheme'
-import { useDraggable } from '../../hooks/useDraggable'
+import { useTheme } from "../../hooks/useTheme";
+import { useDraggable } from "../../hooks/useDraggable";
 
-import './BrowserWindow.css'
+import "./BrowserWindow.css";
 
 interface BrowserWindowProps {
-  activeTab: TabId
-  onSelectTab: (id: TabId) => void
-  isFront: boolean
-  onFocus: () => void
+  activeTab: TabId;
+  onSelectTab: (id: TabId) => void;
+  zIndex: number;
+  onFocus: () => void;
 }
 
-export const BrowserWindow = ({ activeTab, onSelectTab, isFront, onFocus }: BrowserWindowProps) => {
-  const { isDark, toggleTheme } = useTheme()
-  const { offset, handlePointerDown, handlePointerMove, handlePointerUp } = useDraggable()
+export const BrowserWindow = ({
+  activeTab,
+  onSelectTab,
+  zIndex,
+  onFocus,
+}: BrowserWindowProps) => {
+  const { isDark, toggleTheme } = useTheme();
+  const { offset, handlePointerDown, handlePointerMove, handlePointerUp } =
+    useDraggable();
 
-  const contentRef = useRef<HTMLElement>(null)
+  const contentRef = useRef<HTMLElement>(null);
 
   const handleSelectTab = (id: TabId) => {
-    onSelectTab(id)
+    onSelectTab(id);
 
     if (contentRef.current) {
-      contentRef.current.scrollTop = 0
+      contentRef.current.scrollTop = 0;
     }
-  }
+  };
 
   return (
     <div
       className="browser"
-      style={{ transform: `translate(${offset.x}px, ${offset.y}px)`, zIndex: isFront ? 2 : 1 }}
+      style={{
+        transform: `translate(-50%, -50%) translate(${offset.x}px, ${offset.y}px)`,
+        zIndex,
+      }}
       onPointerDown={onFocus}
     >
       <ChromeBar
@@ -53,11 +62,11 @@ export const BrowserWindow = ({ activeTab, onSelectTab, isFront, onFocus }: Brow
         <Sidebar activeTab={activeTab} onSelectTab={handleSelectTab} />
 
         <main className="content" ref={contentRef}>
-          {activeTab === 'about' && <AboutPanel />}
-          {activeTab === 'work' && <WorkPanel />}
-          {activeTab === 'contact' && <ContactPanel />}
+          {activeTab === "about" && <AboutPanel />}
+          {activeTab === "work" && <WorkPanel />}
+          {activeTab === "contact" && <ContactPanel />}
         </main>
       </div>
     </div>
-  )
-}
+  );
+};

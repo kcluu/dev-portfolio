@@ -1,26 +1,27 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from "react";
 
-import { ChromeBar } from '../ChromeBar/ChromeBar'
-import { MusicPanel } from '../MusicPanel/MusicPanel'
+import { ChromeBar } from "../ChromeBar/ChromeBar";
+import { MusicPanel } from "../MusicPanel/MusicPanel";
 
-import { useTheme } from '../../hooks/useTheme'
-import { useDraggable } from '../../hooks/useDraggable'
+import { useTheme } from "../../hooks/useTheme";
+import { useDraggable } from "../../hooks/useDraggable";
 
-import '../BrowserWindow/BrowserWindow.css'
-import './MusicWindow.css'
+import "../BrowserWindow/BrowserWindow.css";
+import "./MusicWindow.css";
 
-const BASE_OFFSET = { x: 34, y: 34 }
+const BASE_OFFSET = { x: -145, y: -327 };
 
 interface MusicWindowProps {
-  isFront: boolean
-  onFocus: () => void
+  zIndex: number;
+  onFocus: () => void;
 }
 
-export const MusicWindow = ({ isFront, onFocus }: MusicWindowProps) => {
-  const { isDark, toggleTheme } = useTheme()
-  const { offset, handlePointerDown, handlePointerMove, handlePointerUp } = useDraggable()
+export const MusicWindow = ({ zIndex, onFocus }: MusicWindowProps) => {
+  const { isDark, toggleTheme } = useTheme();
+  const { offset, handlePointerDown, handlePointerMove, handlePointerUp } =
+    useDraggable();
 
-  const windowRef = useRef<HTMLDivElement>(null)
+  const windowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // clicking into a Spotify iframe never bubbles a pointer event to us (it's
@@ -28,22 +29,22 @@ export const MusicWindow = ({ isFront, onFocus }: MusicWindowProps) => {
     const handleWindowBlur = () => {
       window.setTimeout(() => {
         if (windowRef.current?.contains(document.activeElement)) {
-          onFocus()
+          onFocus();
         }
-      }, 0)
-    }
+      }, 0);
+    };
 
-    window.addEventListener('blur', handleWindowBlur)
-    return () => window.removeEventListener('blur', handleWindowBlur)
-  }, [onFocus])
+    window.addEventListener("blur", handleWindowBlur);
+    return () => window.removeEventListener("blur", handleWindowBlur);
+  }, [onFocus]);
 
   return (
     <div
       ref={windowRef}
       className="browser music-window"
       style={{
-        transform: `translate(${BASE_OFFSET.x + offset.x}px, ${BASE_OFFSET.y + offset.y}px)`,
-        zIndex: isFront ? 2 : 1,
+        transform: `translate(-50%, 0) translate(${BASE_OFFSET.x + offset.x}px, ${BASE_OFFSET.y + offset.y}px)`,
+        zIndex,
       }}
       onPointerDown={onFocus}
     >
@@ -61,5 +62,5 @@ export const MusicWindow = ({ isFront, onFocus }: MusicWindowProps) => {
         <MusicPanel />
       </main>
     </div>
-  )
-}
+  );
+};

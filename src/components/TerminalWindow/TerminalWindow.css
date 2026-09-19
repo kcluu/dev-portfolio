@@ -1,10 +1,12 @@
-.music-window {
+.terminal-window {
   position: absolute;
   top: 0;
+  left: 50%;
   z-index: 0;
 
-  width: 720px;
+  width: 760px;
   max-width: calc(100vw - 10vw);
+  height: min(600px, 78vh);
 
   transform-origin: top left;
 
@@ -13,13 +15,14 @@
     0 2px 6px rgba(33, 28, 25, 0.06);
 }
 
-.content.music-content {
+.content.terminal-content {
   padding: 0;
-  background: #121212;
+  background: #1a1a1a;
+  overflow-y: auto;
 }
 
 @media (max-width: 620px) {
-  .music-window {
+  .terminal-window {
     display: none;
   }
 }

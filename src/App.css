@@ -1,8 +1,14 @@
 .window-stack {
   position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.window-stack .browser:not(.music-window) {
-  position: relative;
-  z-index: 1;
+.window-stack .browser {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
 }
