@@ -1,4 +1,4 @@
-# Nora Vance — Portfolio
+# Katelyn Luu — Portfolio
 
 A one-page portfolio built as a little browser window: vertical tabs for
 About / Work / Contact, a draggable chrome bar, and a light/dark toggle
