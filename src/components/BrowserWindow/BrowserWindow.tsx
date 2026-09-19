@@ -16,9 +16,11 @@ import './BrowserWindow.css'
 interface BrowserWindowProps {
   activeTab: TabId
   onSelectTab: (id: TabId) => void
+  isFront: boolean
+  onFocus: () => void
 }
 
-export const BrowserWindow = ({ activeTab, onSelectTab }: BrowserWindowProps) => {
+export const BrowserWindow = ({ activeTab, onSelectTab, isFront, onFocus }: BrowserWindowProps) => {
   const { isDark, toggleTheme } = useTheme()
   const { offset, handlePointerDown, handlePointerMove, handlePointerUp } = useDraggable()
 
@@ -33,7 +35,11 @@ export const BrowserWindow = ({ activeTab, onSelectTab }: BrowserWindowProps) =>
   }
 
   return (
-    <div className="browser" style={{ transform: `translate(${offset.x}px, ${offset.y}px)` }}>
+    <div
+      className="browser"
+      style={{ transform: `translate(${offset.x}px, ${offset.y}px)`, zIndex: isFront ? 2 : 1 }}
+      onPointerDown={onFocus}
+    >
       <ChromeBar
         urlPath={`/${activeTab}`}
         isDark={isDark}

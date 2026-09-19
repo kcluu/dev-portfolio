@@ -21,7 +21,7 @@ export const careerHistory: CareerEntry[] = [
     dateRange: "July 2022 - July 2024",
 
     description:
-      "My first engineering role after graduating university. Learned to ship full-stack applications fast, write tests I actually trusted, and take code review feedback without taking it personally.",
+      "Developed full-stack micro-frontend applications and microservices across CoStar's product suite supporting an internal web platform, and mentored new engineers by leading the internship program and onboarding process.",
   },
 
   {

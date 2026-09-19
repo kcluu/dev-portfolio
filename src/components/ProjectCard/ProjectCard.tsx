@@ -1,9 +1,9 @@
-import type { Project } from '../../data/projects'
+import type { Project } from "../../data/projects";
 
-import './ProjectCard.css'
+import "./ProjectCard.css";
 
 interface ProjectCardProps {
-  project: Project
+  project: Project;
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
@@ -11,7 +11,9 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
     <div className="project">
       <div className="project-head">
         <h3>{project.name}</h3>
-        <a href={project.href}>View project ↗</a>
+        <a href={project.href} target="_blank">
+          View project ↗
+        </a>
       </div>
 
       <p>{project.description}</p>
@@ -24,5 +26,5 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};

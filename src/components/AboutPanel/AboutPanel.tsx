@@ -30,9 +30,9 @@ export const AboutPanel = () => {
         Based in New York City, most of my work lives at the intersection of
         full-stack development and UX design. I've always been drawn to the
         space where design and technology meet - building things that don't just
-        function but feel considered. Outside of work, you'll find me out with
-        my film camera, at a concert, or waiting in an unnecessarily long line
-        somewhere in the city.
+        function but feel considered. Outside of work, you'll find me with a
+        film camera in my hand, at a concert, or finally baking something from
+        my saved recipes.
       </p>
 
       <div className="chips">

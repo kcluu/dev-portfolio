@@ -1,11 +1,18 @@
-import type { PointerEvent } from 'react'
+import type { PointerEvent, ReactNode } from 'react'
 
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
 
 import './ChromeBar.css'
 
+const DEFAULT_DOMAIN = (
+  <>
+    kluu<b>.</b>dev
+  </>
+)
+
 interface ChromeBarProps {
   urlPath: string
+  domain?: ReactNode
   isDark: boolean
   onToggleTheme: () => void
   onPointerDown: (event: PointerEvent<HTMLDivElement>) => void
@@ -15,6 +22,7 @@ interface ChromeBarProps {
 
 export const ChromeBar = ({
   urlPath,
+  domain = DEFAULT_DOMAIN,
   isDark,
   onToggleTheme,
   onPointerDown,
@@ -38,7 +46,8 @@ export const ChromeBar = ({
       <div className="addr">
         <span className="lock">🔒</span>
         <span className="url">
-          kluu<b>.</b>dev{urlPath}
+          {domain}
+          {urlPath}
         </span>
       </div>
 

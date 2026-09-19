@@ -1,0 +1,88 @@
+.music-panel {
+  --spotify-green: #1db954;
+  --spotify-gray: #b3b3b3;
+
+  min-height: 100%;
+  padding: 28px 32px 32px;
+
+  background: linear-gradient(180deg, #2a1e3d 0%, #121212 320px);
+  color: #fff;
+  font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.music-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.cover-art {
+  flex: 0 0 auto;
+  width: 112px;
+  height: 112px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.4rem;
+  color: rgba(255, 255, 255, 0.85);
+
+  background: linear-gradient(135deg, var(--spotify-green), #1a5a35);
+  border-radius: 6px;
+  box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.6);
+}
+
+.music-meta {
+  min-width: 0;
+}
+
+.music-kicker {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.music-title {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+
+.music-sub {
+  font-size: 0.85rem;
+  color: var(--spotify-gray);
+  margin: 0;
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-embed {
+  border-radius: 12px;
+  border: none;
+  display: block;
+  margin: 4px;
+}
+
+@media (max-width: 620px) {
+  .music-panel {
+    padding: 22px 20px 26px;
+  }
+
+  .music-header {
+    align-items: center;
+  }
+
+  .cover-art {
+    width: 84px;
+    height: 84px;
+    font-size: 1.8rem;
+  }
+}

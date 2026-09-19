@@ -16,13 +16,13 @@ export const contactMethods: ContactMethod[] = [
   {
     id: "linkedin",
     label: "linkedin.com/in/katelyn-luu",
-    href: "#",
+    href: "https://www.linkedin.com/in/katelyn-luu/",
     external: true,
   },
   {
     id: "github",
     label: "github.com/kcluu",
-    href: "#",
+    href: "https://github.com/kcluu",
     external: true,
   },
   {

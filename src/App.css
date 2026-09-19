@@ -1,0 +1,8 @@
+.window-stack {
+  position: relative;
+}
+
+.window-stack .browser:not(.music-window) {
+  position: relative;
+  z-index: 1;
+}
