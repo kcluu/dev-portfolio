@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 type ThemeOverride = "light" | "dark" | null;
 
-export function useTheme() {
+export const useTheme = () => {
   const [override, setOverride] = useState<ThemeOverride>("light");
 
   const isDark = override === "dark";

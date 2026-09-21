@@ -8,7 +8,7 @@ interface Position {
 
 const ORIGIN: Position = { x: 0, y: 0 }
 
-export function useDraggable() {
+export const useDraggable = () => {
   const [offset, setOffset] = useState<Position>(ORIGIN)
 
   const dragStart = useRef<Position>(ORIGIN)
