@@ -1,4 +1,4 @@
-# Katelyn Luu - Portfolio
+# Katelyn's Dev Portfolio
 
 My one-page, interactive portfolio built as little browser windows: vertical tabs for
 About / Work / Contact, a draggable chrome bar, and a light/dark toggle.
