@@ -16,7 +16,7 @@ export const CopyEmailButton = ({ email }: CopyEmailButtonProps) => {
       setCopied(true)
       setTimeout(() => setCopied(false), 1600)
     } catch {
-      // clipboard access can fail (permissions, insecure context, etc.) —
+      // clipboard access can fail (permissions, insecure context, etc.)
       // the email is already visible above, so this is a quiet no-op
     }
   }

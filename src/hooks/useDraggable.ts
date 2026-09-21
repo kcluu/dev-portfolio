@@ -35,7 +35,7 @@ export const useDraggable = () => {
     const dx = event.clientX - dragStart.current.x
     const dy = event.clientY - dragStart.current.y
 
-    // update the drag origin every frame so deltas stay relative to "now",
+    // Update the drag origin every frame so deltas stay relative to "now",
     // then fold that delta into the accumulated offset
     dragStart.current = { x: event.clientX, y: event.clientY }
 

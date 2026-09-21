@@ -9,8 +9,6 @@ import "./App.css";
 
 type WindowId = "browser" | "music" | "terminal";
 
-// rendered in a fixed order so the DOM never reorders: reordering would move the
-// Spotify iframe to a new DOM position, which makes browsers reload it
 const WINDOW_ORDER: WindowId[] = ["browser", "music", "terminal"];
 
 export const App = () => {

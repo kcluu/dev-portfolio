@@ -24,7 +24,7 @@ export const MusicWindow = ({ zIndex, onFocus }: MusicWindowProps) => {
   const windowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // clicking into a Spotify iframe never bubbles a pointer event to us (it's
+    // Clicking into a Spotify iframe never bubbles a pointer event to us (it's
     // a separate document), so detect the resulting window blur instead
     const handleWindowBlur = () => {
       window.setTimeout(() => {
