@@ -12,7 +12,7 @@ export const featuredProjects: Project[] = [
     name: "Encore: Fan Score",
     description:
       "A fan scoring platform that lets you connect your Spotify account or upload your listening data, search for your favorite artists, and discover a personalized Fan Score based on factors like listening frequency, recency, and how long you've been listening to an artist.",
-    tags: ["React", "TypeScript"],
+    tags: ["React", "TypeScript", "Vite", "CSS", "Spotify API"],
     href: "https://github.com/kcluu/encore",
     demoHref: "https://encore-music.vercel.app/",
     previewGif: "/projects/encore-fan-score.gif",
